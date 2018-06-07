@@ -3,14 +3,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Bridges {
+public class Main2 {
 
     public static Node[] nodes;
     public static StringBuilder bridges = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
-
-
 
         FileReader fileReader = new FileReader("graph.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -68,9 +66,9 @@ public class Bridges {
 
         }
 
-        BridgeFinder bridgeFinder = new BridgeFinder(nodes,bridges);
+        ArticulationPointFinder articulationPointFinder = new ArticulationPointFinder(nodes, bridges);
 
-            bridgeFinder.getResult();
+            articulationPointFinder.getResult();
     }
 
 
