@@ -1,11 +1,11 @@
 public class BridgeFinder {
 
     public  Node[] nodes;
-    public  StringBuilder bridges = new StringBuilder();
+    //public  StringBuilder bridges = new StringBuilder();
 
     public BridgeFinder(Node[] nodes, StringBuilder bridges) {
         this.nodes = nodes;
-        this.bridges = bridges;
+        //this.bridges = bridges;
     }
 
     public  String getResult() {
@@ -15,7 +15,7 @@ public class BridgeFinder {
 
             }
         }
-        return bridges.toString();
+        return "dupa";
     }
 
 
@@ -29,7 +29,7 @@ public class BridgeFinder {
 
             Node neighbour = currentNode.listOfNodes.get(i);
             if (neighbour.number != parentNode) {
-                if (!neighbour.wasVisited) {
+                if (!(neighbour.indexDFS>0)) {
                     int nestedLow = DFS(indexDFS + 1, neighbour.number, currentNodeNumber);
                     if (nestedLow < currentNode.low) {
                         currentNode.low = nestedLow;
@@ -44,7 +44,7 @@ public class BridgeFinder {
 
         if (parentNode > -1 && currentNode.indexDFS == currentNode.low) {
             System.out.println("Found bridger" + parentNode + " - " + currentNodeNumber);
-            bridges.append(parentNode + currentNodeNumber);
+           // bridges.append(parentNode + currentNodeNumber);
         }
         return currentNode.low;
     }
