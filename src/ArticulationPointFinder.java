@@ -49,7 +49,7 @@ public class ArticulationPointFinder {
         }
 
         if (test ==1){
-            System.out.println("Found articulation point: "+ currentNodeNumber);
+            System.out.println("Found articulation point: ******************       "+ currentNodeNumber+"           ****************");
         }
 
         return currentNode.low;

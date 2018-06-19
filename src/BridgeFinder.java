@@ -41,9 +41,8 @@ public class BridgeFinder {
             }
         }
 
-
         if (parentNode > -1 && currentNode.indexDFS == currentNode.low) {
-            System.out.println("Found bridge: " + parentNode + " - " + currentNodeNumber);
+            System.out.println("Found bridge: ***************        " + parentNode + " - " + currentNodeNumber+"        ****************");
            // bridges.append(parentNode + currentNodeNumber);
         }
         return currentNode.low;
