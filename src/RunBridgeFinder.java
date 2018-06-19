@@ -39,11 +39,11 @@ public class RunBridgeFinder {
         BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
         //String lowerNodeString = bufferedReader2.readLine();
         String root = bufferedReader2.readLine();
-        System.out.println("root: "+root);
+        System.out.println("root: " + root);
         int temp = 0;
-        for(int i =1; i<=numberOfNodes; i++){
+        for (int i = 1; i <= numberOfNodes; i++) {
             temp++;
-            System.out.println("temp:"+temp);
+            System.out.println("temp:" + temp);
 
             String lowerNodeString = bufferedReader2.readLine();
 
@@ -67,11 +67,10 @@ public class RunBridgeFinder {
             }
 
         }
-        BridgeFinder bridgeFinder = new BridgeFinder(nodes,bridges);
+        BridgeFinder bridgeFinder = new BridgeFinder(nodes, bridges);
         bridgeFinder.getResult();
-
-
     }
+
 
 
 
