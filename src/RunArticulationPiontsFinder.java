@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Main {
+public class RunArticulationPiontsFinder {
 
     public static Node[] nodes;
     public static StringBuilder bridges = new StringBuilder();
@@ -40,14 +40,16 @@ public class Main {
         FileReader fileReader2 = new FileReader("graph.txt");
         BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
         //String lowerNodeString = bufferedReader2.readLine();
-
+        String root = bufferedReader2.readLine();
+        System.out.println("root: "+root);
         int temp = 0;
-
         for(int i =1; i<=numberOfNodes; i++){
             temp++;
-            String lowerNodeString = bufferedReader2.readLine();
-            System.out.println(lowerNodeString);
+            System.out.println("temp:"+temp);
 
+            String lowerNodeString = bufferedReader2.readLine();
+
+            System.out.println(lowerNodeString);
             lowerNodeString.split(" ");
             System.out.println(lowerNodeString);
 
@@ -68,11 +70,9 @@ public class Main {
 
         }
 
-        BridgeFinder bridgeFinder = new BridgeFinder(nodes,bridges);
         ArticulationPointFinder articulationPointFinder = new ArticulationPointFinder(nodes, bridges);
 
-            bridgeFinder.getResult();
-            articulationPointFinder.getResult();
+        articulationPointFinder.getResult();
     }
 
 

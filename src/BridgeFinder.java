@@ -15,7 +15,7 @@ public class BridgeFinder {
 
             }
         }
-        return "dupa";
+        return " ";
     }
 
 

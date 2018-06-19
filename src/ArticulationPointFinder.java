@@ -15,7 +15,7 @@ public class ArticulationPointFinder {
 
             }
         }
-        return "dupa";
+        return " ";
     }
 
 
