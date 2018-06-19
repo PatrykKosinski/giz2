@@ -38,14 +38,16 @@ public class Main2 {
         FileReader fileReader2 = new FileReader("graph.txt");
         BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
         //String lowerNodeString = bufferedReader2.readLine();
-
+        String root = bufferedReader2.readLine();
+        System.out.println("root: "+root);
         int temp = 0;
-
         for(int i =1; i<=numberOfNodes; i++){
             temp++;
-            String lowerNodeString = bufferedReader2.readLine();
-            System.out.println(lowerNodeString);
+            System.out.println("temp:"+temp);
 
+            String lowerNodeString = bufferedReader2.readLine();
+
+            System.out.println(lowerNodeString);
             lowerNodeString.split(" ");
             System.out.println(lowerNodeString);
 
@@ -65,10 +67,10 @@ public class Main2 {
             }
 
         }
+        BridgeFinder bridgeFinder = new BridgeFinder(nodes,bridges);
+        bridgeFinder.getResult();
 
-        ArticulationPointFinder articulationPointFinder = new ArticulationPointFinder(nodes, bridges);
 
-            articulationPointFinder.getResult();
     }
 
 
